@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import logoImg from '../../assets/canal10.png';
 import { AuthContext } from '../../context/AuthContext';
 import { LoginComp } from './LoginComp';
 import { RegisterComp } from './RegisterComp';
@@ -7,30 +6,29 @@ import { RegisterComp } from './RegisterComp';
 export const NavComp = () => {
   const { currentUser, logout } = useContext(AuthContext);
 
+  let admin = currentUser ? true : false;
+
   return (
-    <nav className="container-fluid navbar navbar-light border">
+    <nav className="container-fluid bg-danger">
       <div className="container-fluid">
-        <div className="navbar-brand">
-          <img src={logoImg} alt="logo" height="50" /> ADMINISTRACIÓN
-        </div>
+       
         <div className="d-flex">
-          <div className="col">
+          <div className={admin ? 'col-11 navbar-brand text-white' : 'm-5 text-white fs-1'}>
+              TALLER TAXIS C-10
+          </div> 
             {currentUser ? (
               <>
-                <div className="btn btn-success mx-2 disabled">
-                  {currentUser.email}
-                </div>
-                <div onClick={() => logout()} className="btn btn-outline-secondary mx-2">
+                <div onClick={() => logout()} 
+                className={admin ? 'm-2 text-center col-1 text-white' : 'border'}>
                   SALIR
                 </div>
               </>
             ) : (
-              <>
+              <div className="border col-8 mb-5 mt-5" style={{backgroundColor:'rgb(244,234,234)'}} >
                 <LoginComp />
                 <RegisterComp />
-              </>
+              </div>
             )}
-          </div>
         </div>
       </div>
     </nav>
