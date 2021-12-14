@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/taller-t/static/css/main.645dae1b.chunk.css",
+    "main.js": "/taller-t/static/js/main.d82ba405.chunk.js",
+    "main.js.map": "/taller-t/static/js/main.d82ba405.chunk.js.map",
+    "runtime-main.js": "/taller-t/static/js/runtime-main.dd77599d.js",
+    "runtime-main.js.map": "/taller-t/static/js/runtime-main.dd77599d.js.map",
+    "static/css/2.f97446a8.chunk.css": "/taller-t/static/css/2.f97446a8.chunk.css",
+    "static/js/2.cadcde78.chunk.js": "/taller-t/static/js/2.cadcde78.chunk.js",
+    "static/js/2.cadcde78.chunk.js.map": "/taller-t/static/js/2.cadcde78.chunk.js.map",
+    "index.html": "/taller-t/index.html",
+    "static/css/2.f97446a8.chunk.css.map": "/taller-t/static/css/2.f97446a8.chunk.css.map",
+    "static/css/main.645dae1b.chunk.css.map": "/taller-t/static/css/main.645dae1b.chunk.css.map",
+    "static/js/2.cadcde78.chunk.js.LICENSE.txt": "/taller-t/static/js/2.cadcde78.chunk.js.LICENSE.txt",
+    "static/media/canal10.24a72002.png": "/taller-t/static/media/canal10.24a72002.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd77599d.js",
+    "static/css/2.f97446a8.chunk.css",
+    "static/js/2.cadcde78.chunk.js",
+    "static/css/main.645dae1b.chunk.css",
+    "static/js/main.d82ba405.chunk.js"
+  ]
+}
