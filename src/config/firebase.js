@@ -5,12 +5,12 @@ import 'firebase/firestore';
 
 // Use your own configs!
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyB3s6QjYWR6EL45XSK7ANP-D_1I-DZ9eYg",
-  authDomain: "taxis-e44d6.firebaseapp.com",
-  projectId: "taxis-e44d6",
-  storageBucket: "taxis-e44d6.appspot.com",
-  messagingSenderId: "603667662446",
-  appId: "1:603667662446:web:0014b763a2a4acca92487f"
+  apiKey: "AIzaSyB2F4R4KkxUwb4GFKs7twRhiHS5i-i51D4",
+  authDomain: "scopic-73416.firebaseapp.com",
+  projectId: "scopic-73416",
+  storageBucket: "scopic-73416.appspot.com",
+  messagingSenderId: "475263107333",
+  appId: "1:475263107333:web:27180a036864e16618376c"
 });
 
 export const timestamp = firebase.firestore.FieldValue.serverTimestamp;
