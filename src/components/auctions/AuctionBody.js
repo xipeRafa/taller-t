@@ -1,22 +1,24 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Alert } from "react-bootstrap";
 import { AuthContext } from "../../context/AuthContext";
-import { AuctionCard } from "./AuctionCard";
-import { ProgressBar } from "./ProgressBar";
+/* import { AuctionCard } from "./AuctionCard"; */
+import { ProgressBar } from "./ProgressBar"; 
 import { FilterContext } from "../../context/FilterContext";
-import DatePicker, { registerLocale } from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import ItemSelected from "./ItemSelected";
-import Filters from "./Filters";
+/* import DatePicker, { registerLocale } from "react-datepicker"; */
+/* import "react-datepicker/dist/react-datepicker.css"; */
+/* import ItemSelected from "./ItemSelected";
+import Filters from "./Filters"; */
 
-import "./picker.css";
-import es from "date-fns/locale/es";
+/* import "./picker.css"; */
+/* import es from "date-fns/locale/es"; */
 import { AddAuction } from './AddAuction';
 
-registerLocale("es", es);
+/* registerLocale("es", es); */
 
 export const AuctionBody = () => {
   const [auction, setAuction] = useState(null);
+  console.log(auction)
+
   const { currentUser, globalMsg } = useContext(AuthContext);
   const { DB } = useContext(FilterContext);
 
@@ -43,7 +45,7 @@ export const AuctionBody = () => {
 
   return (
     <div className="container-fluid">
-      {auction && <ProgressBar auction={auction} setAuction={setAuction} />}
+       {auction && <ProgressBar auction={auction} setAuction={setAuction} />} 
 
       <div
         style={{ zIndex: "9999999" }}
@@ -53,7 +55,7 @@ export const AuctionBody = () => {
       </div>
 
       <div>
-        <AddAuction />
+        <AddAuction setAuction={setAuction}/>
       </div>
 
 

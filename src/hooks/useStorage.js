@@ -3,13 +3,16 @@ import { firestoreApp, storageApp, timestamp } from '../config/firebase';
 
 const useStorage = (data) => {
   const [progress, setProgress] = useState(0);
-  const [isCompleted, setIsCompleted] = useState(null);
+  const [isCompleted, setIsCompleted] = useState(true); 
 
   useState(() => {
-    const storageRef = storageApp.ref(data.itemImage.name);
+ /*     const storageRef = storageApp.ref(data?.itemImage?.name);  */
     const collectionRef = firestoreApp.collection('auctions');
 
-    storageRef.put(data.itemImage).on(
+    collectionRef.add({ ...data })
+
+
+  /*   storageRef.put(data?.itemImage).on(
       'state_changed',
       (snap) => {
         let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
@@ -17,18 +20,18 @@ const useStorage = (data) => {
       },
       (err) => {
         console.log(err);
-      },
-      async () => {
-        const imgUrl = await storageRef.getDownloadURL();
-        const createdAt = timestamp();
-        delete data.itemImage;
-        await collectionRef.add({ ...data, createdAt, imgUrl });
-        setIsCompleted(true);
-      }
-    );
+      }, */
+  /*     async () => { */
+       /*  const imgUrl = await storageRef.getDownloadURL(); */
+        /* const createdAt = timestamp(); */
+       /*  delete data?.itemImage; */
+       /*  await collectionRef.add({ ...data/* , createdAt *//* , imgUrl }); */
+       /*  setIsCompleted(true); */
+    /*   }
+    ); */
   }, [data]);
 
-  return { progress, isCompleted };
+  return { progress, isCompleted }; 
 };
 
 export default useStorage;
