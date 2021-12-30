@@ -35,7 +35,7 @@ export const AddAuction = ({ setAuction }) => {
       email: currentUser.email,
       title: itemTitle.current.value,
       title1: itemTitle1.current.value,
-      title2: itemTitle2.current.value,
+      costo: Number(itemTitle2.current.value),
       title3: itemTitle3.current.value,
       description: itemDesc.current.value,
       duration: dueDate,
