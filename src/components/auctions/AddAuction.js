@@ -1,9 +1,8 @@
-import { Button, Form, Modal, Alert, Row, Col } from "react-bootstrap";
-import React, { useContext, useRef, useState } from "react";
+import { Button, Form, Modal, Row, Col } from "react-bootstrap";
+import React, { useContext, useRef} from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 export const AddAuction = ({ setAuction }) => {
-/*   const [error, setError] = useState(""); */
 
   const itemTitle = useRef();
   const itemTitle1 = useRef();
@@ -11,22 +10,15 @@ export const AddAuction = ({ setAuction }) => {
   const itemTitle3 = useRef();
 
   const itemDesc = useRef();
-  /* const itemImage = useRef(); */
   const itemCategorie = useRef();
   const myFormRef = useRef();
   
 
   const { currentUser } = useContext(AuthContext);
 
-/*   const imgTypes = ["image/png", "image/jpeg", "image/jpg"]; */
 
   const submitForm = async (e) => {
     e.preventDefault();
-  /*   setError(""); */
-
-  /*   if (!imgTypes.includes(itemImage.current.files[0].type)) {
-      return setError("Please use a valid image");
-    } */
 
     let currentDate = new Date();
     let dueDate = currentDate.setHours(currentDate.getHours());
@@ -39,15 +31,13 @@ export const AddAuction = ({ setAuction }) => {
       title3: itemTitle3.current.value,
       description: itemDesc.current.value,
       duration: dueDate,
-     /*  itemImage: itemImage.current.files[0], */
       categorie: itemCategorie.current.value,
       completed: false
     };
 
     setAuction(newAuction);
-  /*   closeForm(); */
 
-  myFormRef.current.reset()
+    myFormRef.current.reset()
 
   };
   let admin = currentUser ? true : false;
@@ -62,7 +52,6 @@ export const AddAuction = ({ setAuction }) => {
         ref={myFormRef}
       >
         <Modal.Body>
-        {/*   {error && <Alert variant="danger">{error}</Alert>} */}
           <Row>
             <Col>
               <Form.Group className="bg-secondary text-center p-2 text-white w-100 mb-4">
@@ -136,26 +125,14 @@ export const AddAuction = ({ setAuction }) => {
               </Form.Group>
             </Col>
           </Row>
-
-          {/*       <Row>
-              <Col>
-              <Form.Label></Form.Label>
-                <Form.Group >
-                  <Form.File
-                    label="Cargar Foto"
-                    custom
-                    required
-                    ref={itemImage}
-                  />
-                </Form.Group>
-              </Col>
-            </Row> */}
         </Modal.Body>
+
         <Modal.Footer>
           <Button variant="secondary" type="submit" className="w-100">
             Guardar Ticket
           </Button>
         </Modal.Footer>
+        
       </form>
     </>
   );
