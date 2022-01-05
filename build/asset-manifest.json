@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/taller-t/static/js/main.46da48fc.chunk.js",
-    "main.js.map": "/taller-t/static/js/main.46da48fc.chunk.js.map",
+    "main.js": "/taller-t/static/js/main.6fee5067.chunk.js",
+    "main.js.map": "/taller-t/static/js/main.6fee5067.chunk.js.map",
     "runtime-main.js": "/taller-t/static/js/runtime-main.dd77599d.js",
     "runtime-main.js.map": "/taller-t/static/js/runtime-main.dd77599d.js.map",
     "static/css/2.54370922.chunk.css": "/taller-t/static/css/2.54370922.chunk.css",
-    "static/js/2.08bfea90.chunk.js": "/taller-t/static/js/2.08bfea90.chunk.js",
-    "static/js/2.08bfea90.chunk.js.map": "/taller-t/static/js/2.08bfea90.chunk.js.map",
+    "static/js/2.e1b2b940.chunk.js": "/taller-t/static/js/2.e1b2b940.chunk.js",
+    "static/js/2.e1b2b940.chunk.js.map": "/taller-t/static/js/2.e1b2b940.chunk.js.map",
     "index.html": "/taller-t/index.html",
     "static/css/2.54370922.chunk.css.map": "/taller-t/static/css/2.54370922.chunk.css.map",
-    "static/js/2.08bfea90.chunk.js.LICENSE.txt": "/taller-t/static/js/2.08bfea90.chunk.js.LICENSE.txt"
+    "static/js/2.e1b2b940.chunk.js.LICENSE.txt": "/taller-t/static/js/2.e1b2b940.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dd77599d.js",
     "static/css/2.54370922.chunk.css",
-    "static/js/2.08bfea90.chunk.js",
-    "static/js/main.46da48fc.chunk.js"
+    "static/js/2.e1b2b940.chunk.js",
+    "static/js/main.6fee5067.chunk.js"
   ]
 }
