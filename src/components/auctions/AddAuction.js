@@ -4,13 +4,13 @@ import { AuthContext } from "../../context/AuthContext";
 
 export const AddAuction = ({ setAuction }) => {
 
-  const itemTitle = useRef();
-  const itemTitle1 = useRef();
-  const itemTitle2 = useRef();
-  const itemTitle3 = useRef();
+  const unidad = useRef();
+  const description = useRef();
+  const costo = useRef();
+  const taxista = useRef();
 
-  const itemDesc = useRef();
-  const itemCategorie = useRef();
+  const coments = useRef();
+  const categorie = useRef();
   const myFormRef = useRef();
   
 
@@ -25,20 +25,20 @@ export const AddAuction = ({ setAuction }) => {
 
     let newAuction = {
       email: currentUser.email,
-      title: itemTitle.current.value,
-      title1: itemTitle1.current.value,
-      costo: Number(itemTitle2.current.value),
-      title3: itemTitle3.current.value,
-      description: itemDesc.current.value,
+      unidad: unidad.current.value,
+      desc: description.current.value,
+      costo: Number(costo.current.value),
+      taxista: taxista.current.value,
+      coments:  coments.current.value,
       duration: dueDate,
-      categorie: itemCategorie.current.value
+      categorie: categorie.current.value
     };
 
     setAuction(newAuction);
 
     myFormRef.current.reset()
-
   };
+
   let admin = currentUser ? true : false;
 
   return (
@@ -64,7 +64,7 @@ export const AddAuction = ({ setAuction }) => {
                 <Form.Control
                   type="number"
                   required
-                  ref={itemTitle}
+                  ref={unidad}
                   placeholder="Numero de Unidad"
                 />
               </Form.Group>
@@ -76,8 +76,8 @@ export const AddAuction = ({ setAuction }) => {
                 <Form.Control
                   type="text"
                   required
-                  ref={itemTitle3}
-                  placeholder="Nombre de Taxista"
+                  ref={taxista}
+                  placeholder="KL de Taxista"
                 />
               </Form.Group>
             </Col>
@@ -88,14 +88,14 @@ export const AddAuction = ({ setAuction }) => {
               <Form.Control
                 as="select"
                 multiple={false}
-                ref={itemCategorie}
+                ref={categorie}
                 className="mb-3"
               >
                 <option disabled>Selecciona una Opcion        </option>
-                <option value="mantenimiento"> Mantenimiento  </option> 
-                <option value="reparacion">    Reparacion     </option> 
-                <option value="choque">        Choque         </option> 
-                <option value="llantas">       LLantas        </option> 
+                <option value="Mantenimiento"> Mantenimiento  </option> 
+                <option value="Reparacion">    Reparacion     </option> 
+                <option value="Choque">        Choque         </option> 
+                <option value="Llantas">       LLantas        </option> 
             {/* <option value="clienteExterno">Cliente Externo</option> */}
               </Form.Control>
             </Col>
@@ -104,7 +104,7 @@ export const AddAuction = ({ setAuction }) => {
             <Col>
               <Form.Group className="mb-3">
                 <Form.Label>Descripcion</Form.Label>
-                <Form.Control type="text" required ref={itemTitle1} />
+                <Form.Control type="text" required ref={description} />
               </Form.Group>
             </Col>
           </Row>
@@ -112,7 +112,7 @@ export const AddAuction = ({ setAuction }) => {
             <Col>
               <Form.Group className="mb-3">
                 <Form.Label>Costo Total</Form.Label>
-                <Form.Control type="number" required ref={itemTitle2} />
+                <Form.Control type="number" required ref={costo} />
               </Form.Group>
             </Col>
           </Row>
@@ -120,7 +120,7 @@ export const AddAuction = ({ setAuction }) => {
             <Col>
               <Form.Group>
                 <Form.Label>Comentarios</Form.Label>
-                <Form.Control type="text" required ref={itemDesc} />
+                <Form.Control type="text" required ref={coments} />
               </Form.Group>
             </Col>
           </Row>
