@@ -112,7 +112,7 @@ export const AddAuction = ({ setAuction }) => {
             <Col>
               <Form.Group className="mb-3">
                 <Form.Label>Costo Total</Form.Label>
-                <Form.Control type="number" required ref={costo} />
+                <Form.Control type="number" required ref={costo} step='any' />
               </Form.Group>
             </Col>
           </Row>
