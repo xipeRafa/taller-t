@@ -31,8 +31,7 @@ export const AddAuction = ({ setAuction }) => {
       title3: itemTitle3.current.value,
       description: itemDesc.current.value,
       duration: dueDate,
-      categorie: itemCategorie.current.value,
-      completed: false
+      categorie: itemCategorie.current.value
     };
 
     setAuction(newAuction);
@@ -128,7 +127,7 @@ export const AddAuction = ({ setAuction }) => {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary" type="submit" className="w-100">
+          <Button variant="danger" type="submit" className="w-100">
             Guardar Ticket
           </Button>
         </Modal.Footer>
