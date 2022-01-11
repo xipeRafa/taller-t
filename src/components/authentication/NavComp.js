@@ -13,13 +13,13 @@ export const NavComp = () => {
       <div className="container-fluid">
        
         <div className="d-flex">
-          <div className={admin ? 'col-11 navbar-brand text-white' : 'm-5 text-white fs-1'}>
+          <div className={admin ? 'col-9 navbar-brand text-white' : 'm-5 text-white fs-1'}>
               TALLER TAXIS C-10
           </div> 
             {currentUser ? (
               <>
                 <div onClick={() => logout()} 
-                className={admin ? 'm-2 text-center col-1 text-white' : 'border'}>
+                className={admin ? 'm-2 text-center col-3 text-white' : 'border'}>
                   SALIR
                 </div>
               </>
